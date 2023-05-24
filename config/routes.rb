@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   # get 'restaurants/:id/reviews', to: 'views#create', as: 'reviews'
   # post 'restaurants/:id/reviews/new', to: 'views#new'
   resources :restaurants do
-    resources :reviews
+    resources :reviews, only: [:create]
   end
 end
